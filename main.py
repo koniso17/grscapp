@@ -91,7 +91,7 @@ while True:
             "実施日": ", ".join(dates)
         })
 
-        time.sleep(1)
+        time.sleep(0.5)
 
     page += 1
 
@@ -109,5 +109,5 @@ client = gspread.authorize(creds)
 # スプレッドシートを開いて上書き
 spreadsheet = client.open("forapplist")
 worksheet = spreadsheet.worksheet("シート1")
-worksheet.clear()
+worksheet.batch_clear(["A:F"]) 
 worksheet.update([df.columns.tolist()] + df.values.tolist())
