@@ -107,7 +107,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 client = gspread.authorize(creds)
 
 # スプレッドシートを開いて上書き
-spreadsheet = client.open("講座一覧（自動更新）")
+spreadsheet = client.open("forapplist")
 worksheet = spreadsheet.worksheet("シート1")
 worksheet.clear()
 worksheet.update([df.columns.tolist()] + df.values.tolist())
