@@ -2,7 +2,7 @@ name: Update Inasougo Sheet
 
 on:
   schedule:
-    - cron: '1 7 * * *'  # JST 02:00
+    - cron: '0 17 * * *'  # JST 02:00
   workflow_dispatch:
 
 jobs:
