@@ -106,7 +106,7 @@ scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/au
 creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 client = gspread.authorize(creds)
 
-# スプレッドシートを開いて上書き
+# スプレッドシートを開いて上書きする
 spreadsheet = client.open("forapplist")
 worksheet = spreadsheet.worksheet("シート1")
 worksheet.batch_clear(["A:F"]) 
